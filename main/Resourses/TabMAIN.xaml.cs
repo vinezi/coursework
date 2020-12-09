@@ -12,17 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using center;
 
-namespace main
+namespace main.Resourses
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для TabMAIN.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TabMAIN : UserControl
     {
-        public MainWindow()
+        public TabMAIN()
         {
             InitializeComponent();
+        }
+        private void btest(object sender, RoutedEventArgs e)
+        {
+            vinezi Valute = new vinezi("");
+            lbValut.Content = Valute.GetValute();
         }
     }
 }
