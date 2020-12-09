@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:main"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{DynamicResource rTitle}" Height="450" Width="800" Style="{DynamicResource WindowStyle}"> 
     <Grid>
-        
+        <TabControl x:Name="MainMenu" Style="{DynamicResource TabControlStyle}">
+            <TabItem Header= "{DynamicResource rTitle}" Style="{DynamicResource TabItemStyle}">
+                <Frame Source="Resourses/TabMAIN.xaml"/>
+            </TabItem>
+            <TabItem Header= "{DynamicResource rTabSetting}" >
+                <Frame Source="Resourses/TabSETTING.xaml"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
+   
