@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl x:Name="MainMenu" >
+            <TabItem Header= "Расписание" >
+                <Frame Source="Resourses/TabSCHDULE.xaml"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
