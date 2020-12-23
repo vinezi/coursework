@@ -4,12 +4,15 @@
     xmlns:local="clr-namespace:main.Resourses">
 
     <Style x:Key="TextBlockStyle" TargetType="TextBlock">
-        <Setter Property="Background" Value="Gray" />
         <Setter Property="Foreground" Value="White" />
     </Style>
     <Style x:Key="WindowStyle" TargetType="Window">
-        <Setter Property="Background" Value="Gray" />
+        <Setter Property="Background" Value="#3f3f3f" />
     </Style>
+    <Style x:Key="GridStyle" TargetType="Grid">
+        <Setter Property="Background" Value="#3f3f3f"/>
+    </Style>
+    
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="Gray" />
         <Setter Property="Foreground" Value="White" />
@@ -22,7 +25,7 @@
 
 
     <Style x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
-        <Setter Property="Background" Value="Gray" />
+        <Setter Property="Background" Value="#3f3f3f" />
     </Style>
 
 

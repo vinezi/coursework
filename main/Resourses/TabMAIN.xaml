@@ -5,10 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:main.Resourses"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="900">
     <Grid >
-        <Label x:Name="lbValut" Content="Label" Margin="118,97,0,0"  Style="{DynamicResource LableStyle}" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="269,149,0,0" VerticalAlignment="Top" Width="75" Click="btest" Style="{DynamicResource ButtonStyle}"/>
+        <!--<Label x:Name="lbValut" Content="Label" Margin="118,97,0,0"  Style="{DynamicResource LableStyle}" Height="193" VerticalAlignment="Top" HorizontalAlignment="Left" Width="643"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="269,149,0,0" VerticalAlignment="Top" Width="75" Click="btest" Style="{DynamicResource ButtonStyle}"/>-->
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="233*"/>
+        </Grid.ColumnDefinitions>
+        <!--  Thin UltraLight <TextBlock x:Name="tbDigital" FontSize="150" Foreground="Black" FontWeight="Light" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>-->
+        <!--HorizontalAlignment="Center"-->
+        <TextBlock x:Name="tbDigital" FontSize="70" Style="{DynamicResource TextBlockStyle}" FontWeight="Light" TextWrapping="Wrap" Text="Loading..." Margin="55,96,23,0"  Height="80" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbDigital1" FontSize="40" Style="{DynamicResource TextBlockStyle}" FontWeight="Light" TextWrapping="Wrap" Text="Loading..." Margin="41,242,10,0"  Height="53" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Grid Grid.Column="1">
+            <TextBlock x:Name="tbWeather" TextWrapping="Wrap" Style="{DynamicResource TextBlockStyle}" FontWeight="Light" Margin="8,119,5,68" HorizontalAlignment="Center" Width="453">
+                <Run x:Name="tbrTemperature" FontSize="60" Text="1"/>
+                <Run x:Name="tbrTemperaturePart" FontSize="35" Text="1_1"/>
+                
+                <Run x:Name="tbrWeatherType" FontSize="30" Text="2"/>
+                
+                <Run x:Name="tbrMin" FontSize="45" Text="3"/>
+                <Run x:Name="tbrMinPart" FontSize="25" Text="3_1"/>
+                
+                <Run x:Name="tbrMax" FontSize="45" Text="4"/>
+                <Run x:Name="tbrMaxPart" FontSize="25" Text="4_1"/>
+                
+                <Run x:Name="tbrCityName" FontSize="30" Text="5"/>
+            </TextBlock>
+        </Grid>
     </Grid>
 </UserControl>
