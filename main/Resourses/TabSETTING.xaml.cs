@@ -29,8 +29,8 @@ namespace main.Resourses
 
             List<string> styles = new List<string> { "Resourses/ThemeLIGHT", "Resourses/ThemeDARK" };
             styleBox.SelectionChanged += ThemeChange;
-            //styleBox.ItemsSource = styles;
-            //styleBox.SelectedItem = "Resourses/ThemeDARK";
+            //styleBox.ItemsSource = styles; //пустой
+            styleBox.SelectedItem = "Resourses/ThemeDARK";
         }
 
         private void CbLangSelector(object sender, SelectionChangedEventArgs e)

@@ -5,14 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:main.Resourses"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="900">
     <Grid>
         <ComboBox SelectedIndex="0" Margin="141,60,126,0" SelectionChanged="CbLangSelector" Height="22" VerticalAlignment="Top">
             <ComboBoxItem Name="ru" Tag ="ru-RU" Content="{DynamicResource rLangSelectorRu}"/>
             <ComboBoxItem Name="en" Tag="en-EN" Content="{DynamicResource rLangSelectorEn}"/>
         </ComboBox>
-
-        <ComboBox SelectedIndex="0" x:Name="styleBox" Margin="141,121,126,0" Height="22" VerticalAlignment="Top">
+<!--SelectedIndex="0"-->
+        <ComboBox  x:Name="styleBox" Margin="141,121,126,0" Height="22" VerticalAlignment="Top">
             <ComboBoxItem Name="LIGHT" Tag="Resourses/ThemeLIGHT" Content="{DynamicResource rThemeSelectorLIGHT}"/>
             <ComboBoxItem Name="DARK" Tag="Resourses/ThemeDARK" Content="{DynamicResource rLangSelectorDARK}"/>
         </ComboBox>
