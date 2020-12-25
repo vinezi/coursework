@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl x:Name="MainMenu">
+            <TabItem Header= "100" >
+                <Frame Source="rzmControl.xaml"/>
+            </TabItem>
+        </TabControl>
     </Grid>
+
 </Window>
