@@ -9,7 +9,7 @@
     <Grid>
         <TabControl x:Name="MainMenu" >
             <TabItem Header= "Расписание" >
-                <Frame Source="Resourses/TabSCHDULE.xaml"/>
+                <Frame Source="Resources/TabSCHDULE.xaml"/>
             </TabItem>
         </TabControl>
     </Grid>

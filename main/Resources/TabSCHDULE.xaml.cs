@@ -3,6 +3,7 @@ using main.Servesice;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -27,6 +28,7 @@ namespace main.Resourses
         private readonly string PATH = $"{Environment.CurrentDirectory}\\testDate";
         private BindingList<Schedule> _todoData;
         private FileIOService _fileIOService;
+        string language;
 
         public TabSCHDULE()
         {
@@ -35,6 +37,7 @@ namespace main.Resourses
             ListBoxItem FirstItem = new ListBoxItem();
             FirstItem = (ListBoxItem)SelectDay.SelectedItem;
             FirstItem.Focus();
+            language = "ru-RU";
         }
         private void SelectDay_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -92,6 +95,22 @@ namespace main.Resourses
             TextBox textBox = sender as TextBox;
             textBox.Focus();
             if (textBox.Text != null) textBox.SelectAll();
+        }
+        private void LS(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+            language = (cb.SelectedItem as ComboBoxItem).Tag.ToString();
+
+            if (language != null)
+            {
+                CultureInfo lang = new CultureInfo(language);
+
+                if (lang != null)
+                {
+                    App.Language = lang;
+                }
+
+            }
         }
     }
 }

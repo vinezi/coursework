@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns:v="clr-namespace:System;assembly=mscorlib"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:main.Resources">
+    <v:String x:Key="rMonday">Понедельник</v:String>
+    <v:String x:Key="rTuesday">Вторник</v:String>
+    <v:String x:Key="rWednesday">Среда</v:String>
+    <v:String x:Key="rThursday">Четверг</v:String>
+    <v:String x:Key="rFriday">Пятница</v:String>
+    <v:String x:Key="rSaturday">Суббота</v:String>
+    <v:String x:Key="rSunday">Воскресенье</v:String>
+    <v:String x:Key="rTime">Время</v:String>
+    <v:String x:Key="rObject">Предмет</v:String>
+    <v:String x:Key="rOffice">Кабинет</v:String>
+    <v:String x:Key="rProfessor">Преподователь</v:String>
+</ResourceDictionary>

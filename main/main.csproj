@@ -59,7 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\Schedule.cs" />
-    <Compile Include="Resourses\TabSCHDULE.xaml.cs">
+    <Compile Include="Resources\TabSCHDULE.xaml.cs">
       <DependentUpon>TabSCHDULE.xaml</DependentUpon>
     </Compile>
     <Compile Include="Servesice\FileIOService.cs" />
@@ -75,7 +75,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Resourses\TabSCHDULE.xaml">
+    <Page Include="Resources\LangEN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\LangRU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\TabSCHDULE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
