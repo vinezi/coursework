@@ -63,6 +63,13 @@
       <DependentUpon>TabSCHDULE.xaml</DependentUpon>
     </Compile>
     <Compile Include="Servesice\FileIOService.cs" />
+    <Compile Include="Resourses\TabMAIN.xaml.cs">
+      <DependentUpon>TabMAIN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resourses\TabSETTING.xaml.cs">
+      <DependentUpon>TabSETTING.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Servicec\WeatherInf.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +91,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\TabSCHDULE.xaml">
+		<SubType>Designer</SubType>
+		<Generator>MSBuild:Compile</Generator>
+	</Page>
+    <Page Include="Resourses\LangEN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resourses\LangRU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resourses\TabMAIN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resourses\TabSETTING.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resourses\ThemeDARK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resourses\ThemeLIGHT.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\center\ValuteServicec.csproj">
+      <Project>{9d8ebb73-cdbc-44bc-be63-ab29e90141bb}</Project>
+      <Name>ValuteServicec</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -96,21 +96,6 @@ namespace main.Resourses
             textBox.Focus();
             if (textBox.Text != null) textBox.SelectAll();
         }
-        private void LS(object sender, SelectionChangedEventArgs e)
-        {
-            ComboBox cb = sender as ComboBox;
-            language = (cb.SelectedItem as ComboBoxItem).Tag.ToString();
-
-            if (language != null)
-            {
-                CultureInfo lang = new CultureInfo(language);
-
-                if (lang != null)
-                {
-                    App.Language = lang;
-                }
-
-            }
-        }
+       
     }
 }

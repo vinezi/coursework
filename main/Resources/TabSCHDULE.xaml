@@ -12,20 +12,20 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Name="SelectDay" SelectionChanged="SelectDay_SelectionChanged">
-            <ListBoxItem Tag="Monday" Content="{DynamicResource rMonday}" Background="LightGray"/>
-            <ListBoxItem Tag="Tuesday" Content="{DynamicResource rTuesday}" Background="LightGray"/>
-            <ListBoxItem Tag="Wednesday" Content="{DynamicResource rWednesday}" Background="LightGray"/>
-            <ListBoxItem Tag="Thursday" Content="{DynamicResource rThursday}" Background="LightGray"/>
-            <ListBoxItem Tag="Friday" Content="{DynamicResource rFriday}" Background="LightGray"/>
-            <ListBoxItem Tag="Saturday" Content="{DynamicResource rSaturday}" Background="LightGray"/>
-            <ListBoxItem Tag="Sunday" Content="{DynamicResource rSunday}" Background="LightGray"/>
+        <ListBox Name="SelectDay" SelectionChanged="SelectDay_SelectionChanged" Style="{DynamicResource ListBoxStyle}">
+            <ListBoxItem Tag="Monday" Content="{DynamicResource rMonday}" Style ="{DynamicResource ListBoxItemStyle}" Background="LightGray"/>
+            <ListBoxItem Tag="Tuesday" Content="{DynamicResource rTuesday}" Style ="{DynamicResource ListBoxItemStyle}" Background="LightGray"/>
+            <ListBoxItem Tag="Wednesday" Content="{DynamicResource rWednesday}" Style ="{DynamicResource ListBoxItemStyle}" Background="LightGray"/>
+            <ListBoxItem Tag="Thursday" Content="{DynamicResource rThursday}" Style ="{DynamicResource ListBoxItemStyle}" Background="LightGray"/>
+            <ListBoxItem Tag="Friday" Content="{DynamicResource rFriday}" Style ="{DynamicResource ListBoxItemStyle}" Background="LightGray"/>
+            <ListBoxItem Tag="Saturday" Content="{DynamicResource rSaturday}" Style ="{DynamicResource ListBoxItemStyle}" Background="LightGray"/>
+            <ListBoxItem Tag="Sunday" Content="{DynamicResource rSunday}" Style ="{DynamicResource ListBoxItemStyle}" Background="LightGray"/>
         </ListBox>
 
         <Grid Grid.Column="1">
-            <DataGrid x:Name="test" AutoGenerateColumns="False">
+            <DataGrid x:Name="test" AutoGenerateColumns="False" Style="{DynamicResource DataGridStyle}">
                 <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="{DynamicResource rTime}" Width="*">
+                    <DataGridTemplateColumn Header="{DynamicResource rTime}" HeaderStyle="{DynamicResource DataGridHeaderStyle}" Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=TextTime}" />
@@ -38,9 +38,9 @@
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTextColumn Binding="{Binding Path= TextSubject}" Header="{DynamicResource rObject}" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Path= TextSubject}" Header="{DynamicResource rObject}" HeaderStyle="{DynamicResource DataGridHeaderStyle}" Width="*"/>
 
-                    <DataGridTemplateColumn Header="{DynamicResource rOffice}" Width="*">
+                    <DataGridTemplateColumn Header="{DynamicResource rOffice}" HeaderStyle="{DynamicResource DataGridHeaderStyle}" Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=TextCabinet}" />
@@ -53,13 +53,9 @@
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTextColumn Binding="{Binding Path= TextTeacher}" Header="{DynamicResource rProfessor}" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Path= TextTeacher}" Header="{DynamicResource rProfessor}" HeaderStyle="{DynamicResource DataGridHeaderStyle}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <ComboBox SelectionChanged="LS" HorizontalAlignment="Left" Margin="448,418,0,0" VerticalAlignment="Top" Width="75" SelectedIndex="0">
-                <ComboBoxItem Name="ru" Tag ="ru-RU" Content="{DynamicResource rLangSelectorRu}"/>
-                <ComboBoxItem Name="en" Tag="en-EN" Content="{DynamicResource rLangSelectorEn}"/>
-            </ComboBox>
         </Grid>
     </Grid>
 </UserControl>

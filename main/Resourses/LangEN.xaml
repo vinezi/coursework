@@ -1,0 +1,16 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <v:String x:Key="rTitle">Main window</v:String>
+    <v:String x:Key="rLangSelectorRu">Русский</v:String>
+    <v:String x:Key="rLangSelectorEn">English</v:String>
+    <v:String x:Key="rTabSetting">Setting</v:String>
+    <v:String x:Key="rSettindLang">Select Language</v:String>
+    <v:String x:Key="rSettindTheme">Select theme</v:String>
+    <v:String x:Key="rThemeSelectorLIGHT">Light theme</v:String>
+    <v:String x:Key="rLangSelectorDARK">Dark theme</v:String>
+
+    
+</ResourceDictionary>
