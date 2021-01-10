@@ -126,9 +126,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\center\center.csproj">
+    <ProjectReference Include="..\center\ValuteServicec.csproj">
       <Project>{9d8ebb73-cdbc-44bc-be63-ab29e90141bb}</Project>
-      <Name>center</Name>
+      <Name>ValuteServicec</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

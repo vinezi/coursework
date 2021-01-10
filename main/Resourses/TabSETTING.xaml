@@ -7,20 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="900">
     <Grid>
-        <ComboBox SelectedIndex="0" Margin="141,60,126,0" SelectionChanged="CbLangSelector" Height="22" VerticalAlignment="Top">
-            <ComboBoxItem Name="ru" Tag ="ru-RU" Content="{DynamicResource rLangSelectorRu}"/>
-            <ComboBoxItem Name="en" Tag="en-EN" Content="{DynamicResource rLangSelectorEn}"/>
-        </ComboBox>
-<!--SelectedIndex="0"-->
-        <ComboBox  x:Name="styleBox" Margin="141,121,126,0" Height="22" VerticalAlignment="Top">
-            <ComboBoxItem Name="LIGHT" Tag="Resourses/ThemeLIGHT" Content="{DynamicResource rThemeSelectorLIGHT}"/>
-            <ComboBoxItem Name="DARK" Tag="Resourses/ThemeDARK" Content="{DynamicResource rLangSelectorDARK}"/>
-        </ComboBox>
-        
         <Label Content="{DynamicResource rSettindLang}" HorizontalAlignment="Left" Margin="141,29,0,0" VerticalAlignment="Top" Width="533" Style="{DynamicResource LableStyle}"/>
+        <ComboBox x:Name="langBox" Margin="141,60,126,0" SelectionChanged="LangSelector" Height="22" VerticalAlignment="Top">
+            <ComboBoxItem Name="ru" Tag ="RU" Content="{DynamicResource rLangSelectorRu}"/>
+            <ComboBoxItem Name="en" Tag ="EN" Content="{DynamicResource rLangSelectorEn}"/>
+        </ComboBox>
         <Label Content="{DynamicResource rSettindTheme}" Margin="141,90,126,0" VerticalAlignment="Top" Style="{DynamicResource LableStyle}"/>
-        <Label Content="{DynamicResource rSettindExchangeRate}" HorizontalAlignment="Left" Margin="141,148,0,0" VerticalAlignment="Top" Width="533" Style="{DynamicResource LableStyle}"/>
-
-
+        <ComboBox  x:Name="styleBox" Margin="141,121,126,0" SelectionChanged="ThemeChange" Height="22" VerticalAlignment="Top">
+            <ComboBoxItem Name="LIGHT" Tag="LIGHT" Content="{DynamicResource rThemeSelectorLIGHT}"/>
+            <ComboBoxItem Name="DARK" Tag="DARK" Content="{DynamicResource rLangSelectorDARK}"/>
+        </ComboBox>
     </Grid>
 </UserControl>

@@ -3,36 +3,91 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:main.Resourses">
 
+    <Style x:Key="DataGridStyle" TargetType="DataGrid">
+        <Setter Property="Foreground" Value="White" />
+        <!--цвет всех букв-->
+        <Setter Property="Background" Value="#3f3f3f" />
+        <!-- цвет задней подложки (не ячейки)-->
+        <!--<Setter Property="AlternatingRowBackground" Value="Yellow" />  другой цвет через 1 (опцианално)-->
+        <Setter Property="RowBackground" Value="#292a2d" />
+        <!-- цвет ячеек  -->
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style x:Key="DataGridHeaderStyle" TargetType="DataGridColumnHeader">
+        <Setter Property="Foreground" Value="White" />
+        <!--цвет букв в заголовке-->
+        <Setter Property="Background" Value="Black" />
+        <!-- цвет подложки header-->
+        <Setter Property="BorderBrush" Value="Red" />
+        <!-- цвет boder?-->
+    </Style>
+    <Style x:Key="ListBoxStyle" TargetType="ListBox">
+        <Setter Property="Foreground" Value="White" />
+        <!--цвет букв -->
+        <Setter Property="Background" Value="#292a2d" />
+        <!-- цвет задней подложки-->
+        <Setter Property="BorderBrush" Value="Aqua" />
+        <!-- цвет всей рамки листа-->
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style x:Key="ListBoxItemStyle" TargetType="ListBoxItem">
+        <Setter Property="Foreground" Value="White" />
+        <!--цвет букв в заголовке для конкретного-->
+        <Setter Property="Background" Value="Black" />
+        <!-- цвет подложки не выбрано-->
+        <Setter Property="BorderBrush" Value="Aqua" />
+        <!-- цвет boder конкретного-->
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontSize" Value="15" />
+    </Style>
+    <!--up color-->
+
+
+
+
     <Style x:Key="TextBlockStyle" TargetType="TextBlock">
         <Setter Property="Foreground" Value="Black" />
+        <!-- цвет всех букв-->
     </Style>
-    <Style x:Key="WindowStyle" TargetType="Window">
+    <Style x:Key="TabControlStyle" TargetType="TabControl">
         <Setter Property="Background" Value="White" />
+        <!-- цвет закраски окна-->
     </Style>
     <Style x:Key="GridStyle" TargetType="Grid">
         <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style x:Key="GridStyle1" TargetType="Grid">
+        <Setter Property="Background" Value="Black"/>
+    </Style>
+    <Style x:Key="GridStyle3" TargetType="Grid">
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style x:Key="LableStyle" TargetType="Label">
+        <Setter Property="Foreground" Value="Gray" />
+    </Style>
+
+
+
+    <!--!used--><!--
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="White" />
     </Style>
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="White" />
         <Setter Property="Foreground" Value="Gray" />
         <Setter Property="BorderBrush" Value="Gray" />
     </Style>
-
+    
     <Style x:Key="LableStyle" TargetType="Label">
-        <Setter Property="Foreground" Value="Gray" />
+        <Setter Property="Foreground" Value="White" />
     </Style>
-
-    <Style x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
-        <Setter Property="Background" Value="White" />
-        <Setter Property="Foreground" Value="Green"/>
-        
+    <Style x:Key="TabItemStyle" TargetType="TabItem">
     </Style>
-    <Style x:Key="TabItemStyle" TargetType="{x:Type TabItem}">
-       
-
-
-
-
+     <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="White"/>
     </Style>
+    -->
 
 </ResourceDictionary>

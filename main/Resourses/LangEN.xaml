@@ -9,8 +9,8 @@
     <v:String x:Key="rTabSetting">Setting</v:String>
     <v:String x:Key="rSettindLang">Select Language</v:String>
     <v:String x:Key="rSettindTheme">Select theme</v:String>
-    <v:String x:Key="rSettindExchangeRate">Select the displayed exchange rates</v:String>
     <v:String x:Key="rThemeSelectorLIGHT">Light theme</v:String>
     <v:String x:Key="rLangSelectorDARK">Dark theme</v:String>
+
     
 </ResourceDictionary>

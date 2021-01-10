@@ -10,7 +10,7 @@
         <WindowChrome CaptionHeight="23"/>
     </WindowChrome.WindowChrome>
     <Grid Style="{DynamicResource GridStyle}">
-        <Grid VerticalAlignment="Top" Height="23" Style="{DynamicResource GridStyle}">
+        <Grid VerticalAlignment="Top" Height="23" Style="{DynamicResource GridStyle1}"> <!--цвет не юзера-->
             <TextBlock Text="{DynamicResource rTitle}" FontSize="14" Foreground="Aqua" HorizontalAlignment="Left"/>
             <StackPanel Height="23" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button Width="35" Content="-" Name="MinimizeButton"/>
@@ -18,7 +18,6 @@
                 <Button Width="35" Content="x" Name="CloseButton"/>
             </StackPanel>
         </Grid>
-
         <TabControl x:Name="MainMenu" Style="{DynamicResource TabControlStyle}" Margin="0,23,0,0">
             <TabItem Header= "{DynamicResource rTitle}" Style="{DynamicResource TabItemStyle}">
                 <Frame Source="Resourses/TabMAIN.xaml"/>

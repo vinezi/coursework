@@ -12,7 +12,8 @@ namespace main.Servicec
     class WeatherInf
     {
         private const string APIKEY = "LyGJIzhovFEZDamKoA9B5LUgppX4E5oo";
-        private const string PATH = @"C:\Users\wewew\Desktop\";
+        private const string APIKEY_RES = "9BGnt2vsAWQG13vLMq3ZpzQnZb4W98me";
+        private readonly string PATH = $"{Environment.CurrentDirectory}\\";
         private const string FILE_IP = @"IP.xml";
         private const string FILE_CONFIG_CITY = @"config_city.xml";
         private const string FILE_CONFIG_DAY = @"config_day.xml";
@@ -96,7 +97,13 @@ namespace main.Servicec
             correctXml = _getInfo(tmpURL, FILE_CONFIG_HOUR, false);
             match = Regex.Match(correctXml, "{\"DateTime\":\"(.*?):");
             string oldDate = match.Groups[1].Value;
-            string nowDate = DateTime.Now.ToString("yyyy-MM-ddTHH");
+            int offset = int.Parse(DateTime.Now.ToString("HH"));       //смещение +1 час
+            string offsetShift = "";
+            if (offset == 23)
+                offsetShift += 00;
+            else
+                offsetShift += (offset + 1).ToString();                
+            string nowDate = DateTime.Now.ToString("yyyy-MM-ddT") + offsetShift;
             if (oldDate != nowDate)
                 correctXml = _getInfo(tmpURL, FILE_CONFIG_HOUR, true);
             match = Regex.Match(correctXml, "\"IconPhrase\":\"(.*?)\",");

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "main", "main.csproj", "{ED63ED92-6991-4E41-80B9-8E3792776642}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "center", "..\center\center.csproj", "{9D8EBB73-CDBC-44BC-BE63-AB29E90141BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValuteServicec", "..\center\ValuteServicec.csproj", "{9D8EBB73-CDBC-44BC-BE63-AB29E90141BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

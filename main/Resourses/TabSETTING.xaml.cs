@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Globalization;
 
 namespace main.Resourses
 {
@@ -21,48 +20,39 @@ namespace main.Resourses
     /// </summary>
     public partial class TabSETTING : UserControl
     {
-        string language;
         public TabSETTING()
         {
-            language = "ru-RU";
             InitializeComponent();
-
-            List<string> styles = new List<string> { "Resourses/ThemeLIGHT", "Resourses/ThemeDARK" };
-            styleBox.SelectionChanged += ThemeChange;
-            //styleBox.ItemsSource = styles; //пустой
-            styleBox.SelectedItem = "Resourses/ThemeDARK";
+            styleBox.SelectedIndex = Properties.Settings.Default.theame; //сохр тему
+            langBox.SelectedIndex = Properties.Settings.Default.language; //сохр lang
         }
 
-        private void CbLangSelector(object sender, SelectionChangedEventArgs e)
+        private void LangSelector(object sender, SelectionChangedEventArgs e)
         {
-
             ComboBox cb = sender as ComboBox;
-            language = (cb.SelectedItem as ComboBoxItem).Tag.ToString();
-
-            if (language != null)
-            {
-                CultureInfo lang = new CultureInfo(language);
-
-                if (lang != null)
-                {
-                    App.Language = lang;
-                }
-
-            }
+            string lang = (cb.SelectedItem as ComboBoxItem).Tag.ToString();
+            var uri = new Uri("Resourses/Lang" + lang + ".xaml", UriKind.Relative);
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            Application.Current.Resources.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            Properties.Settings.Default.language = cb.SelectedIndex;
+            Properties.Settings.Default.Save();
+            
         }
-
         private void ThemeChange(object sender, SelectionChangedEventArgs e)
         {
             ComboBox cb = sender as ComboBox;
             string style = (cb.SelectedItem as ComboBoxItem).Tag.ToString();
             // определяем путь к файлу ресурсов
-            var uri = new Uri(style + ".xaml", UriKind.Relative);
+            var uri = new Uri("Resourses/Theme" + style + ".xaml", UriKind.Relative);
             // загружаем словарь ресурсов
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             // очищаем коллекцию ресурсов приложения
             Application.Current.Resources.Clear();
             // добавляем загруженный словарь ресурсов
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-        }/**/
+            Properties.Settings.Default.theame = cb.SelectedIndex;
+            Properties.Settings.Default.Save();
+        }
     }
 }
