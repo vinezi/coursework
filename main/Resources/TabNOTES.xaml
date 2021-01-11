@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="main.Resources.TabNOTES"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:main"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <Grid Style="{DynamicResource GridStyle}">
+        <DataGrid Style="{DynamicResource DataGridStyle}" x:Name="dgNote" FontSize="16"  SelectionChanged="dgNote_SelectionChanged" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path= Notes}" Width="250" HeaderStyle="{DynamicResource DataGridHeaderStyle}">
+                <DataGridTextColumn.Header>
+                    <TextBlock Text="{DynamicResource rNote}" Style="{DynamicResource TextBlockStyle}"/>
+                </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Path= Date}" IsReadOnly="True" Width="*" HeaderStyle="{DynamicResource DataGridHeaderStyle}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource rDate}" Style="{DynamicResource TextBlockStyle}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Border Margin="10" Padding="00" BorderBrush="DimGray" BorderThickness="2" CornerRadius="2">
+                        <TextBox Style="{DynamicResource TextBoxStyle}" x:Name="Tb"  Text="{Binding Tb,UpdateSourceTrigger=PropertyChanged}"
+                          TextWrapping="Wrap" 
+                         FontSize="14" HorizontalAlignment="Stretch" FontFamily="SEMonotxt" MinWidth="700" MinHeight="0" BorderThickness="0">
+
+                        </TextBox>
+                    </Border>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+
+        </DataGrid>
+    </Grid>
+</UserControl>
