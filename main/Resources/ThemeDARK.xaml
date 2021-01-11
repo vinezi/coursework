@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:main.Resourses">
+    xmlns:local="clr-namespace:main.Resources">
 
     <Style x:Key="DataGridStyle" TargetType="DataGrid">
         <Setter Property="Foreground" Value="White" />
@@ -21,6 +21,7 @@
         <!-- цвет подложки header-->
         <Setter Property="BorderBrush" Value="Red" />
         <!-- цвет boder?-->
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     </Style>
     <Style x:Key="ListBoxStyle" TargetType="ListBox">
         <Setter Property="Foreground" Value="White" />

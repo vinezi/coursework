@@ -13,10 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using ValuteServicec;
-using main.Servicec;
+using ValuteServices;
+using main.Services;
 
-namespace main.Resourses
+namespace main.Resources
 {
     /// <summary>
     /// Логика взаимодействия для TabMAIN.xaml
@@ -52,9 +52,9 @@ namespace main.Resourses
                 tbrMaxPart.Text = part + " ";
                 tbrCityName.Text = alldata.Item5;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message + "\nНекоторые данные не доступны!");
+                MessageBox.Show(ex.Message + "\nНекоторые данные не доступны!");
                 tbrMinPart.Text = "Ошибка загрузки погоды";
             }
             try

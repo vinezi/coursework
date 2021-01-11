@@ -1,5 +1,5 @@
 ﻿using main.Models;
-using main.Servesice;
+using main.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace main.Resourses
+namespace main.Resources
 {
     /// <summary>
     /// Логика взаимодействия для TabSCHDULE.xaml
@@ -28,7 +28,6 @@ namespace main.Resourses
         private readonly string PATH = $"{Environment.CurrentDirectory}\\testDate";
         private BindingList<Schedule> _todoData;
         private FileIOService _fileIOService;
-        string language;
 
         public TabSCHDULE()
         {
@@ -37,13 +36,14 @@ namespace main.Resourses
             ListBoxItem FirstItem = new ListBoxItem();
             FirstItem = (ListBoxItem)SelectDay.SelectedItem;
             FirstItem.Focus();
-            language = "ru-RU";
+            //test.Items.Refresh();
         }
         private void SelectDay_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //test.Items.Refresh();
             string SelectedDay = ((ListBoxItem)SelectDay.SelectedItem).Tag.ToString();
             _fileIOService = new FileIOService(PATH + SelectedDay + ".json");
-            _todoData = _fileIOService.LoadDaete();
+            _todoData = _fileIOService.LoadData();
             try
             {
                 _todoData.ListChanged += _todoData_ListChanged;
@@ -54,6 +54,7 @@ namespace main.Resourses
             }
             test.ItemsSource = _todoData;
             _todoData.ListChanged += _todoData_ListChanged;
+            
         }
 
         private void _todoData_ListChanged(object sender, ListChangedEventArgs e)
@@ -62,7 +63,7 @@ namespace main.Resourses
             {
                 try
                 {
-                    _fileIOService.SaveDate(sender);
+                    _fileIOService.SaveData(sender);
                 }
                 catch (Exception ex)
                 {

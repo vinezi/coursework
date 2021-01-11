@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace main.Servesice
+namespace main.Services
 {
     class FileIOService
     {
@@ -19,7 +19,7 @@ namespace main.Servesice
             PATH = path;
         }
 
-        public BindingList<Schedule> LoadDaete()
+        public BindingList<Schedule> LoadData()
         {
             var fileExists = File.Exists(PATH);
             if (!fileExists)
@@ -38,7 +38,7 @@ namespace main.Servesice
                 return JsonConvert.DeserializeObject<BindingList<Schedule>>(fileText);
             }
         }
-        public void SaveDate(object _todoData)
+        public void SaveData(object _todoData)
         {
             using (StreamWriter writer = File.CreateText(PATH))
             {

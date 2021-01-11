@@ -21,14 +21,14 @@
                 </StackPanel>
             </Grid>
         <TabControl x:Name="MainMenu" Style="{DynamicResource TabControlStyle}" Margin="0,23,0,0">
-            <TabItem Header= "{DynamicResource rTitle}" Style="{DynamicResource TabItemStyle}">
-                <Frame Source="Resourses/TabMAIN.xaml"/>
+            <TabItem Header= "{DynamicResource rTabMainWindow}" Style="{DynamicResource TabItemStyle}">
+                <Frame Source="Resources/TabMAIN.xaml"/>
             </TabItem>
-            <TabItem Header= "Расписание" >
+            <TabItem Header= "{DynamicResource rTabSchedule}" >
                 <Frame Source="Resources/TabSCHDULE.xaml"/>
             </TabItem>
             <TabItem Header= "{DynamicResource rTabSetting}" >
-                <Frame Source="Resourses/TabSETTING.xaml"/>
+                <Frame Source="Resources/TabSETTING.xaml"/>
             </TabItem>
         </TabControl>
     </Grid>

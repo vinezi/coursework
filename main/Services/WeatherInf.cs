@@ -7,12 +7,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace main.Servicec
+namespace main.Services
 {
     class WeatherInf
     {
-        private const string APIKEY = "LyGJIzhovFEZDamKoA9B5LUgppX4E5oo";
-        private const string APIKEY_RES = "9BGnt2vsAWQG13vLMq3ZpzQnZb4W98me";
+        private const string APIKEY_RES = "LyGJIzhovFEZDamKoA9B5LUgppX4E5oo";
+        private const string APIKEY = "9BGnt2vsAWQG13vLMq3ZpzQnZb4W98me";
         private readonly string PATH = $"{Environment.CurrentDirectory}\\";
         private const string FILE_IP = @"IP.xml";
         private const string FILE_CONFIG_CITY = @"config_city.xml";

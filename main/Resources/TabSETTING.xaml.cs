@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace main.Resourses
+namespace main.Resources
 {
     /// <summary>
     /// Логика взаимодействия для TabSETTING.xaml
@@ -31,7 +31,7 @@ namespace main.Resourses
         {
             ComboBox cb = sender as ComboBox;
             string lang = (cb.SelectedItem as ComboBoxItem).Tag.ToString();
-            var uri = new Uri("Resourses/Lang" + lang + ".xaml", UriKind.Relative);
+            var uri = new Uri("Resources/Lang" + lang + ".xaml", UriKind.Relative);
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
@@ -44,7 +44,7 @@ namespace main.Resourses
             ComboBox cb = sender as ComboBox;
             string style = (cb.SelectedItem as ComboBoxItem).Tag.ToString();
             // определяем путь к файлу ресурсов
-            var uri = new Uri("Resourses/Theme" + style + ".xaml", UriKind.Relative);
+            var uri = new Uri("Resources/Theme" + style + ".xaml", UriKind.Relative);
             // загружаем словарь ресурсов
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             // очищаем коллекцию ресурсов приложения

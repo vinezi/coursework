@@ -6,10 +6,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resourses/LangRU.xaml"/>
-                <ResourceDictionary Source="Resourses/LangEN.xaml"/>
-                <ResourceDictionary Source="Resourses/ThemeDARK.xaml"/>
-                <ResourceDictionary Source="Resourses/ThemeLIGHT.xaml"/>
+                <ResourceDictionary Source="Resources/LangRU.xaml"/>
+                <ResourceDictionary Source="Resources/LangEN.xaml"/>
+                <ResourceDictionary Source="Resources/ThemeDARK.xaml"/>
+                <ResourceDictionary Source="Resources/ThemeLIGHT.xaml"/>
                 <ResourceDictionary Source="Resources/LangRU.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

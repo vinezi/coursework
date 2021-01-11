@@ -7,7 +7,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 
 
-namespace ValuteServicec
+namespace ValuteServices
 {
     public class Valute
     {

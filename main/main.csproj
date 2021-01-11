@@ -62,14 +62,14 @@
     <Compile Include="Resources\TabSCHDULE.xaml.cs">
       <DependentUpon>TabSCHDULE.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Servesice\FileIOService.cs" />
-    <Compile Include="Resourses\TabMAIN.xaml.cs">
+    <Compile Include="Services\FileIOService.cs" />
+    <Compile Include="Resources\TabMAIN.xaml.cs">
       <DependentUpon>TabMAIN.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resourses\TabSETTING.xaml.cs">
+    <Compile Include="Resources\TabSETTING.xaml.cs">
       <DependentUpon>TabSETTING.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Servicec\WeatherInf.cs" />
+    <Compile Include="Services\WeatherInf.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +82,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resources\TabSCHDULE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\LangEN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,31 +94,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\TabSCHDULE.xaml">
-		<SubType>Designer</SubType>
-		<Generator>MSBuild:Compile</Generator>
-	</Page>
-    <Page Include="Resourses\LangEN.xaml">
+    <Page Include="Resources\TabMAIN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resourses\LangRU.xaml">
+    <Page Include="Resources\TabSETTING.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resourses\TabMAIN.xaml">
+    <Page Include="Resources\ThemeDARK.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resourses\TabSETTING.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resourses\ThemeDARK.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resourses\ThemeLIGHT.xaml">
+    <Page Include="Resources\ThemeLIGHT.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
