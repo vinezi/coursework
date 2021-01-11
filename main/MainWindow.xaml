@@ -5,13 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:main"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TabControl x:Name="MainMenu">
-            <TabItem Header= "100" >
-                <Frame Source="rzmControl.xaml"/>
+        Title="t" Height="500" Width="900" WindowStyle="None" AllowsTransparency="True" >
+        <WindowChrome.WindowChrome>
+            <WindowChrome CaptionHeight="23"/>
+        </WindowChrome.WindowChrome>
+        <Grid Style="{DynamicResource GridStyle}">
+            <Grid VerticalAlignment="Top" Height="23" Style="{DynamicResource GridStyle1}">
+                <!--цвет не юзера-->
+                <TextBlock Text="{DynamicResource rTitle}" FontSize="14" Foreground="Aqua" HorizontalAlignment="Left"/>
+                <StackPanel Height="23" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Button Width="35" Content="-" Name="MinimizeButton"/>
+                    <Button Width="35" Content="+" Name="MaximizeButton"/>
+                    <Button Width="35" Content="x" Name="CloseButton"/>
+                </StackPanel>
+            </Grid>
+        <TabControl x:Name="MainMenu" Style="{DynamicResource TabControlStyle}" Margin="0,23,0,0">
+            <TabItem Header= "{DynamicResource rTabMainWindow}" Style="{DynamicResource TabItemStyle}">
+                <Frame Source="Resources/TabMAIN.xaml"/>
+            </TabItem>
+            <TabItem Header= "{DynamicResource rTabSchedule}" >
+                <Frame Source="Resources/TabSCHDULE.xaml"/>
+            </TabItem>
+          <TabItem Header= "{DynamicResource rTabNotes}" >
+                <Frame Source="Resources/TabNOTES.xaml"/>
+          </TabItem>
+            <TabItem Header= "{DynamicResource rTabSetting}" >
+                <Frame Source="Resources/TabSETTING.xaml"/>
             </TabItem>
         </TabControl>
     </Grid>
 
 </Window>
+
+   

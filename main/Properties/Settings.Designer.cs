@@ -8,29 +8,52 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace main.Properties {
-    
-    
+namespace main.Properties
+{
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
-            get {
+
+        public static Settings Default
+        {
+            get
+            {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\honor\\OneDrive\\Рабо" +
-            "чий стол\\coursework\\zamDB.mdf\";Integrated Security=True;Connect Timeout=30")]
-        public string zamDBConnectionString {
-            get {
-                return ((string)(this["zamDBConnectionString"]));
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int language
+        {
+            get
+            {
+                return ((int)(this["language"]));
+            }
+            set
+            {
+                this["language"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int theame
+        {
+            get
+            {
+                return ((int)(this["theame"]));
+            }
+            set
+            {
+                this["theame"] = value;
             }
         }
     }
