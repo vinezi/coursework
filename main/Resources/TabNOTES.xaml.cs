@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.ComponentModel;
 using main.Models;
-using main.rzmIO;
+using main.Services;
 using System;
 
 namespace main.Resources
@@ -11,35 +11,27 @@ namespace main.Resources
     /// Логика взаимодействия для TabNOTES.xaml
     /// </summary>
     public partial class TabNOTES : UserControl
-    {
-
+    {   
         private readonly string PATH = $"{Environment.CurrentDirectory }\\notesDataList.json";
         private BindingList<NotesModel> _notesDataList;
-        private RzmIO _rzmIO;
+        private FileIOService _fileIOService;
         public TabNOTES()
         {
             InitializeComponent();
         }
 
-        private void dgNote_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-        }
-
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            _rzmIO = new RzmIO(PATH);
-
+            _fileIOService = new FileIOService(PATH);
+            _notesDataList = _fileIOService.LoadNoteData();
             try
             {
-                _notesDataList = _rzmIO.LoadData();
+                _notesDataList.ListChanged += _notesDataList_ListChanged;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                
             }
-
-            
 
             dgNote.ItemsSource = _notesDataList;
             _notesDataList.ListChanged += _notesDataList_ListChanged;
@@ -52,7 +44,7 @@ namespace main.Resources
             {
                 try
                 {
-                    _rzmIO.SaveData(sender);
+                    _fileIOService.SaveData(sender);
                 }
                 catch (Exception ex)
                 {
@@ -61,9 +53,6 @@ namespace main.Resources
                 }
             }
         }
-
-        
-
     }
 }
 

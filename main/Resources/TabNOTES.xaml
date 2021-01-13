@@ -7,16 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
     <Grid Style="{DynamicResource GridStyle}">
-        <DataGrid Style="{DynamicResource DataGridStyle}" x:Name="dgNote" FontSize="16"  SelectionChanged="dgNote_SelectionChanged" AutoGenerateColumns="False" >
+        <DataGrid Style="{DynamicResource DataGridStyle}" x:Name="dgNote" FontSize="16" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path= Notes}" Width="250" HeaderStyle="{DynamicResource DataGridHeaderStyle}">
                 <DataGridTextColumn.Header>
-                    <TextBlock Text="{DynamicResource rNote}" Style="{DynamicResource TextBlockStyle}"/>
+                    <TextBlock Text="{DynamicResource rNote}"/>
                 </DataGridTextColumn.Header>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding Path= Date}" IsReadOnly="True" Width="*" HeaderStyle="{DynamicResource DataGridHeaderStyle}">
                     <DataGridTextColumn.Header>
-                        <TextBlock Text="{DynamicResource rDate}" Style="{DynamicResource TextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource rDate}"/>
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
 

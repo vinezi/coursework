@@ -8,7 +8,7 @@
         <!--цвет всех букв-->
         <Setter Property="Background" Value="White" />
         <!-- цвет задней подложки (не ячейки)-->
-        <!--<Setter Property="AlternatingRowBackground" Value="Yellow" />  другой цвет через 1 (опцианално)-->
+        <Setter Property="AlternatingRowBackground" Value="LightGray" /> <!-- другой цвет через 1 (опцианално)-->
         <Setter Property="RowBackground" Value="White" />
         <!-- цвет ячеек  -->
         <Setter Property="FontSize" Value="15" />
@@ -17,10 +17,12 @@
     <Style x:Key="DataGridHeaderStyle" TargetType="DataGridColumnHeader">
         <Setter Property="Foreground" Value="White" />
         <!--цвет букв в заголовке-->
-        <Setter Property="Background" Value="Black" />
+        <Setter Property="Background" Value="Green" />
         <!-- цвет подложки header-->
         <Setter Property="BorderBrush" Value="Red" />
         <!-- цвет boder?-->
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="FontSize" Value="15" />
     </Style>
     <Style x:Key="ListBoxStyle" TargetType="ListBox">
         <Setter Property="Foreground" Value="Black" />
@@ -58,7 +60,7 @@
         <Setter Property="Background" Value="White"/>
     </Style>
     <Style x:Key="GridStyle1" TargetType="Grid">
-        <Setter Property="Background" Value="Black"/>
+        <Setter Property="Background" Value="#292a2d"/>
     </Style>
     <Style x:Key="GridStyle3" TargetType="Grid">
         <Setter Property="Background" Value="White"/>
@@ -74,6 +76,9 @@
 
     </Style>
 
+
+    
+    
     <!--!used--><!--
     <Style x:Key="WindowStyle" TargetType="Window">
         <Setter Property="Background" Value="White" />

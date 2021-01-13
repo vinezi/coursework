@@ -17,11 +17,12 @@
     <Style x:Key="DataGridHeaderStyle" TargetType="DataGridColumnHeader">
         <Setter Property="Foreground" Value="White" />
         <!--цвет букв в заголовке-->
-        <Setter Property="Background" Value="Black" />
+        <Setter Property="Background" Value="Green" />
         <!-- цвет подложки header-->
         <Setter Property="BorderBrush" Value="Red" />
         <!-- цвет boder?-->
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="FontSize" Value="15" />
     </Style>
     <Style x:Key="ListBoxStyle" TargetType="ListBox">
         <Setter Property="Foreground" Value="White" />
@@ -65,7 +66,9 @@
         <Setter Property="Foreground" Value="White" />
 
     </Style>
-   
+
+
+    
     <!--!used-->
     <!--<Style x:Key="WindowStyle" TargetType="Window">
         <Setter Property="Background" Value="#3f3f3f" />

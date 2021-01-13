@@ -19,7 +19,7 @@ namespace main.Services
             PATH = path;
         }
 
-        public BindingList<Schedule> LoadData()
+        public BindingList<Schedule> LoadScheduleData()
         {
             var fileExists = File.Exists(PATH);
             if (!fileExists)
@@ -38,6 +38,22 @@ namespace main.Services
                 return JsonConvert.DeserializeObject<BindingList<Schedule>>(fileText);
             }
         }
+
+        public BindingList<NotesModel> LoadNoteData()
+        {
+            var fileExists = File.Exists(PATH);
+            if (!fileExists)
+            {
+                File.CreateText(PATH).Dispose();
+                return new BindingList<NotesModel>();
+            }
+            using (var reader = File.OpenText(PATH))
+            {
+                var fileText = reader.ReadToEnd();
+                return JsonConvert.DeserializeObject<BindingList<NotesModel>>(fileText);
+            }
+        }
+
         public void SaveData(object _todoData)
         {
             using (StreamWriter writer = File.CreateText(PATH))

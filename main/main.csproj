@@ -62,7 +62,6 @@
     <Compile Include="Resources\TabNOTES.xaml.cs">
       <DependentUpon>TabNOTES.xaml</DependentUpon>
     </Compile>
-    <Compile Include="rzmInOu\rzmIO.cs" />
     <Compile Include="Models\NotesModel.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Resources\TabSCHDULE.xaml.cs">

@@ -43,7 +43,7 @@ namespace main.Resources
             //test.Items.Refresh();
             string SelectedDay = ((ListBoxItem)SelectDay.SelectedItem).Tag.ToString();
             _fileIOService = new FileIOService(PATH + SelectedDay + ".json");
-            _todoData = _fileIOService.LoadData();
+            _todoData = _fileIOService.LoadScheduleData();
             try
             {
                 _todoData.ListChanged += _todoData_ListChanged;

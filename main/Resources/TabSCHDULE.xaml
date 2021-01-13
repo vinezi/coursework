@@ -28,7 +28,7 @@
                     <!---->
                     <DataGridTemplateColumn  HeaderStyle="{DynamicResource DataGridHeaderStyle}" Width="*">
                         <DataGridTemplateColumn.Header>
-                            <TextBlock Text="{DynamicResource rTime}" Style="{DynamicResource TextBlockStyle}"/>
+                            <TextBlock Text="{DynamicResource rTime}" />
                         </DataGridTemplateColumn.Header>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -43,9 +43,9 @@
                     </DataGridTemplateColumn>
 
                     <!---->
-                    <DataGridTextColumn Binding="{Binding Path= TextSubject}"  HeaderStyle="{DynamicResource DataGridHeaderStyle}" Width="*">
+                    <DataGridTextColumn Binding="{Binding Path= TextSubject}" HeaderStyle="{DynamicResource DataGridHeaderStyle}"  Width="*">
                         <DataGridTextColumn.Header>
-                            <TextBlock Text="{DynamicResource rObject}" TextWrapping="Wrap" HorizontalAlignment="Center" Background="Salmon" Margin="0,0,0,0"/>
+                            <TextBlock Text="{DynamicResource rObject}" HorizontalAlignment="Stretch" />
                         </DataGridTextColumn.Header>
                     </DataGridTextColumn>
 
