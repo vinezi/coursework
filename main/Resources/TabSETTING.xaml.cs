@@ -23,8 +23,10 @@ namespace main.Resources
         public TabSETTING()
         {
             InitializeComponent();
-            styleBox.SelectedIndex = Properties.Settings.Default.theame; //сохр тему
+            styleBox.SelectedIndex = Properties.Settings.Default.theame; //сохр them
             langBox.SelectedIndex = Properties.Settings.Default.language; //сохр lang
+            apiBox.SelectedIndex = Properties.Settings.Default.apiKey; //сохр api
+            tbYourKey.Text = Properties.Settings.Default.yourKey;
         }
 
         private void LangSelector(object sender, SelectionChangedEventArgs e)
@@ -53,6 +55,36 @@ namespace main.Resources
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             Properties.Settings.Default.theame = cb.SelectedIndex;
             Properties.Settings.Default.Save();
+        }
+        private void ApiKeyChange(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+            switch (cb.SelectedIndex)
+            {
+                case 0:
+                    Properties.Settings.Default.currentApiKey = Properties.Settings.Default.basicKey;
+                    break;
+                case 1:
+                    Properties.Settings.Default.currentApiKey = Properties.Settings.Default.backupKey;
+                    break;
+                case 2:
+                    Properties.Settings.Default.currentApiKey = Properties.Settings.Default.yourKey;
+                    break;
+                default:
+                    break;
+            }
+            Properties.Settings.Default.apiKey = cb.SelectedIndex;
+            Properties.Settings.Default.Save();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (tbYourKey.Text.Length >0 && tbYourKey.Text.Length <=45)
+            {
+                Properties.Settings.Default.yourKey = tbYourKey.Text;
+                Properties.Settings.Default.currentApiKey = Properties.Settings.Default.yourKey;
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }

@@ -11,8 +11,7 @@ namespace main.Services
 {
     class WeatherInf
     {
-        private const string APIKEY = "LyGJIzhovFEZDamKoA9B5LUgppX4E5oo";
-        private const string APIKEY_RES = "9BGnt2vsAWQG13vLMq3ZpzQnZb4W98me";
+        private string APIKEY = Properties.Settings.Default.currentApiKey;
         private readonly string PATH = $"{Environment.CurrentDirectory}\\";
         private const string FILE_IP = @"IP.xml";
         private const string FILE_CONFIG_CITY = @"config_city.xml";
@@ -69,11 +68,9 @@ namespace main.Services
             return (cityKey, cityName);
         }
 
-        private (int min, int max) _getAverageTemperature()
+        private (int min, int max) _getAverageTemperature(string key)
         {
             Match match;
-            var Inf = _getKeyAndName();
-            string key = Inf.Item1;
             string correctXml, tmpURL = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + key + "?apikey=" + APIKEY + "&language=ru-RU";
             correctXml = _getInfo(tmpURL, FILE_CONFIG_DAY, false);
             match = Regex.Match(correctXml, "\"Date\":\"(.*?)T");
@@ -88,11 +85,9 @@ namespace main.Services
             return (min, max);
         }
 
-        private (string weatherType, int temperature) _getWeatherTypeAndTemperature()
+        private (string weatherType, int temperature) _getWeatherTypeAndTemperature(string key)
         {
             Match match;
-            var Inf = _getKeyAndName();
-            string key = Inf.Item1;
             string correctXml, tmpURL = "http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/" + key + "?apikey=" + APIKEY + "&language=ru-ru";
             correctXml = _getInfo(tmpURL, FILE_CONFIG_HOUR, false);
             match = Regex.Match(correctXml, "{\"DateTime\":\"(.*?):");
@@ -115,14 +110,16 @@ namespace main.Services
 
         public (int temperature, string weatherType, int min, int max, string cityName) AllData()
         {
-            var tmp = _getWeatherTypeAndTemperature();
-            int temperature = _getConverter(tmp.Item2);
-            string weatherType = tmp.Item1;
-            var tmp1 = _getAverageTemperature();
-            int min = _getConverter(tmp1.Item1);
-            int max = _getConverter(tmp1.Item2);
-            var tmp2 = _getKeyAndName();
-            string cityName = tmp2.Item2;
+
+            var tmp0 = _getKeyAndName();
+            string cityKey = tmp0.cityKey;
+            var tmp1 = _getWeatherTypeAndTemperature(cityKey);
+            int temperature = _getConverter(tmp1.temperature);
+            string weatherType = tmp1.weatherType;
+            var tmp2 = _getAverageTemperature(cityKey);
+            int min = _getConverter(tmp2.min);
+            int max = _getConverter(tmp2.max);
+            string cityName = tmp0.cityName;
             return (temperature, weatherType, min, max, cityName);
         }
 

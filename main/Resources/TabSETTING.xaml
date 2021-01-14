@@ -17,5 +17,14 @@
             <ComboBoxItem Name="LIGHT" Tag="LIGHT" Content="{DynamicResource rThemeSelectorLIGHT}"/>
             <ComboBoxItem Name="DARK" Tag="DARK" Content="{DynamicResource rLangSelectorDARK}"/>
         </ComboBox>
+        <Label Content="{DynamicResource rSettindApi}" Margin="141,151,126,0" VerticalAlignment="Top" Style="{DynamicResource LableStyle}"/>
+        <ComboBox  x:Name="apiBox" Margin="141,182,126,0" SelectionChanged="ApiKeyChange" Height="22" VerticalAlignment="Top">
+            <ComboBoxItem Name="basic" Tag="basic" Content="{DynamicResource rApiSelectorBasic}"/>
+            <ComboBoxItem Name="backup" Tag="backup" Content="{DynamicResource rApiSelectorBackup}"/>
+            <ComboBoxItem Name="yourKey" Tag="yourKey" Content="{DynamicResource rApiSelectorYourKey}"/>
+        </ComboBox>
+        <Label Content="{DynamicResource rSettindGetYourKey}" Margin="141,212,126,0" VerticalAlignment="Top" Style="{DynamicResource LableStyle}"/>
+        <TextBox x:Name="tbYourKey" HorizontalAlignment="Left" Height="23" Margin="141,252,0,0" Text="" VerticalAlignment="Top" Width="424"/>
+        <Button Content="{DynamicResource rSettindApplyYourKey}" HorizontalAlignment="Left" Margin="670,252,126,0" VerticalAlignment="Top" Width="105" Height="23" Click="Button_Click"/>
     </Grid>
 </UserControl>
