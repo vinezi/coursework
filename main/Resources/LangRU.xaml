@@ -40,6 +40,7 @@
     <v:String x:Key="rSettindApi">Смена API ключа (если не работает погода)</v:String>
     <v:String x:Key="rApiSelectorBasic">Основной</v:String>
     <v:String x:Key="rApiSelectorBackup">Резервный</v:String>
+    <v:String x:Key="rApiSelectorBackup2">Резервный 2</v:String>
     <v:String x:Key="rApiSelectorYourKey">Свой</v:String>
     <v:String x:Key="rSettindGetYourKey">Получить свой ключ можно на сайте https://developer.accuweather.com/</v:String>
     <v:String x:Key="rSettindApplyYourKey">Применить</v:String>

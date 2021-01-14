@@ -97,6 +97,18 @@ namespace main.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5hvvGiErTAXbcty6ZyZQ8e3slAk4u6nr")]
+        public string backupKey2 {
+            get {
+                return ((string)(this["backupKey2"]));
+            }
+            set {
+                this["backupKey2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string yourKey {
             get {

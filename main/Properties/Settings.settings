@@ -20,6 +20,9 @@
     <Setting Name="backupKey" Type="System.String" Scope="User">
       <Value Profile="(Default)">9BGnt2vsAWQG13vLMq3ZpzQnZb4W98me</Value>
     </Setting>
+    <Setting Name="backupKey2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5hvvGiErTAXbcty6ZyZQ8e3slAk4u6nr</Value>
+    </Setting>
     <Setting Name="yourKey" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

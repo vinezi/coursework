@@ -40,6 +40,7 @@
     <v:String x:Key="rSettindApi">Changing the API key (if the weather doesn't work)</v:String>
     <v:String x:Key="rApiSelectorBasic">Basic</v:String>
     <v:String x:Key="rApiSelectorBackup">Backup</v:String>
+    <v:String x:Key="rApiSelectorBackup2">Backup 2</v:String>
     <v:String x:Key="rApiSelectorYourKey">Your key</v:String>
     <v:String x:Key="rSettindGetYourKey">You can get your key on the website https://developer.accuweather.com/</v:String>
     <v:String x:Key="rSettindApplyYourKey">Apply</v:String>

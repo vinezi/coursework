@@ -68,6 +68,9 @@ namespace main.Resources
                     Properties.Settings.Default.currentApiKey = Properties.Settings.Default.backupKey;
                     break;
                 case 2:
+                    Properties.Settings.Default.currentApiKey = Properties.Settings.Default.backupKey2;
+                    break;
+                case 3:
                     Properties.Settings.Default.currentApiKey = Properties.Settings.Default.yourKey;
                     break;
                 default:

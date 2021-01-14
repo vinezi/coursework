@@ -21,6 +21,7 @@
         <ComboBox  x:Name="apiBox" Margin="141,182,126,0" SelectionChanged="ApiKeyChange" Height="22" VerticalAlignment="Top">
             <ComboBoxItem Name="basic" Tag="basic" Content="{DynamicResource rApiSelectorBasic}"/>
             <ComboBoxItem Name="backup" Tag="backup" Content="{DynamicResource rApiSelectorBackup}"/>
+            <ComboBoxItem Name="backup2" Tag="backup2" Content="{DynamicResource rApiSelectorBackup2}"/>
             <ComboBoxItem Name="yourKey" Tag="yourKey" Content="{DynamicResource rApiSelectorYourKey}"/>
         </ComboBox>
         <Label Content="{DynamicResource rSettindGetYourKey}" Margin="141,212,126,0" VerticalAlignment="Top" Style="{DynamicResource LableStyle}"/>
