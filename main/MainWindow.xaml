@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="t" Height="500" Width="900" WindowStyle="None" AllowsTransparency="True" >
         <WindowChrome.WindowChrome>
-            <WindowChrome CaptionHeight="23"/>
-            
-        </WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="23"/>
+    </WindowChrome.WindowChrome>
         <Grid Style="{DynamicResource GridStyle}">
             <Grid VerticalAlignment="Top" Height="23" Style="{DynamicResource GridStyle1}">
                 <!--цвет не юзера-->

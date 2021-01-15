@@ -39,7 +39,6 @@ namespace main.Resources
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             Properties.Settings.Default.language = cb.SelectedIndex;
             Properties.Settings.Default.Save();
-            
         }
         private void ThemeChange(object sender, SelectionChangedEventArgs e)
         {
@@ -82,11 +81,15 @@ namespace main.Resources
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (tbYourKey.Text.Length >0 && tbYourKey.Text.Length <=45)
+            if (tbYourKey.Text.Length >0 && tbYourKey.Text.Length <=45 && tbYourKey.Text != "{incorrect data}")
             {
                 Properties.Settings.Default.yourKey = tbYourKey.Text;
                 Properties.Settings.Default.currentApiKey = Properties.Settings.Default.yourKey;
                 Properties.Settings.Default.Save();
+            }
+            else
+            {
+                tbYourKey.Text = "{incorrect data}";
             }
         }
     }

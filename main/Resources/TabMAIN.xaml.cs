@@ -35,6 +35,12 @@ namespace main.Resources
                 tbDigital.Text = DateTime.Now.ToString("HH:mm:ss");
                 tbDigital1.Text = DateTime.Now.ToString("ddd, dd MMMM yyyy");
             });
+            getWeather();
+            GetValute();
+        }
+
+        public void getWeather()
+        {
             WeatherInf weatherInf = new WeatherInf();
             try
             {
@@ -57,9 +63,12 @@ namespace main.Resources
                 MessageBox.Show(ex.Message + "\nНекоторые данные не доступны!");
                 tbrMinPart.Text = "Ошибка загрузки погоды";
             }
+        }
+        public void GetValute()
+        {
             try
             {
-                Valute Valute = new Valute("");
+                Valute Valute = new Valute();
                 tbrCourseDollar.Text = "$ " + Valute.GetValuteDollar();
                 tbrCourseEuro.Text = "\t€ " + Valute.GetValuteEuro();
             }
@@ -68,9 +77,13 @@ namespace main.Resources
                 tbrCourseDollar.Text = "";
                 tbrCourseEuro.Text = "Ошибка загрузки валют";
             }
-            
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bRes.IsEnabled = false;
+            bRes.Visibility = Visibility.Collapsed;
+            getWeather();
+        }
     }
 }

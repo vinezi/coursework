@@ -18,7 +18,6 @@ namespace main.Services
         private const string FILE_CONFIG_DAY = @"config_day.xml";
         private const string FILE_CONFIG_HOUR = @"config_hour.xml";
 
-
         private int _getConverter(int old)
         {
             return (old - 32) * 5 / 9;
@@ -53,8 +52,8 @@ namespace main.Services
         private (string cityKey, string cityName) _getKeyAndName()
         {
             var infoIP = _getIP();
-            string IP = infoIP.Item1;
-            bool updateFlag = infoIP.Item2;
+            string IP = infoIP.ip;
+            bool updateFlag = infoIP.isUpdate;
             string correctXml, tmpURL = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=" + APIKEY + "&q=" + IP + "&language=ru-RU";
             if (updateFlag)
                 correctXml = _getInfo(tmpURL, FILE_CONFIG_CITY, true);

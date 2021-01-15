@@ -36,11 +36,9 @@ namespace main.Resources
             ListBoxItem FirstItem = new ListBoxItem();
             FirstItem = (ListBoxItem)SelectDay.SelectedItem;
             FirstItem.Focus();
-            //test.Items.Refresh();
         }
         private void SelectDay_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //test.Items.Refresh();
             string SelectedDay = ((ListBoxItem)SelectDay.SelectedItem).Tag.ToString();
             _fileIOService = new FileIOService(PATH + SelectedDay + ".json");
             _todoData = _fileIOService.LoadScheduleData();
@@ -54,7 +52,6 @@ namespace main.Resources
             }
             test.ItemsSource = _todoData;
             _todoData.ListChanged += _todoData_ListChanged;
-            
         }
 
         private void _todoData_ListChanged(object sender, ListChangedEventArgs e)

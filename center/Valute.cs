@@ -11,11 +11,7 @@ namespace ValuteServices
 {
     public class Valute
     {
-        private string line;
-        public Valute(string line)
-        {
-            this.line = line;
-        }
+        private string line = "";
         public string GetValuteDollar()
         {
             using (WebClient wc = new WebClient())
