@@ -118,5 +118,17 @@ namespace main.Properties {
                 this["yourKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool resetDataFlag {
+            get {
+                return ((bool)(this["resetDataFlag"]));
+            }
+            set {
+                this["resetDataFlag"] = value;
+            }
+        }
     }
 }

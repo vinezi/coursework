@@ -14,9 +14,9 @@
                 <!--цвет не юзера-->
             <TextBlock Text="{DynamicResource rTitle}" FontSize="16" Foreground="Chocolate" HorizontalAlignment="Center"/>
             <StackPanel Height="23" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button Width="32" Content="—" Name="MinimizeButton" Background="#292a2d" Foreground="Chocolate" BorderThickness="0"/>
-                <Button Width="32" Content="⬜" Name="MaximizeButton" Background="#292a2d" Foreground="Chocolate" BorderThickness="0"/>
-                <Button Width="32" Content="🞪" Name="CloseButton" Background="#292a2d" Foreground="Chocolate" FontSize="14" BorderThickness="0"/>
+                <Button Style="{StaticResource ControlButtons}" Width="32" Content="—" Name="MinimizeButton" BorderThickness="0"/>
+                <Button Style="{StaticResource ControlButtons}" Width="32" Content="⬜" Name="MaximizeButton" BorderThickness="0"/>
+                <Button Style="{StaticResource ControlButtonsClose}" Width="32" Content="🞪" Name="CloseButton"  FontSize="14" BorderThickness="0"/>
             </StackPanel>
         </Grid>
         <TabControl x:Name="MainMenu" Style="{DynamicResource TabControlStyle}" Margin="0,23,0,0">

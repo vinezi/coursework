@@ -62,15 +62,19 @@ namespace main.Resources
             {
                 case 0:
                     Properties.Settings.Default.currentApiKey = Properties.Settings.Default.basicKey;
+                    Properties.Settings.Default.resetDataFlag = true;
                     break;
                 case 1:
                     Properties.Settings.Default.currentApiKey = Properties.Settings.Default.backupKey;
+                    Properties.Settings.Default.resetDataFlag = true;
                     break;
                 case 2:
                     Properties.Settings.Default.currentApiKey = Properties.Settings.Default.backupKey2;
+                    Properties.Settings.Default.resetDataFlag = true;
                     break;
                 case 3:
                     Properties.Settings.Default.currentApiKey = Properties.Settings.Default.yourKey;
+                    Properties.Settings.Default.resetDataFlag = true;
                     break;
                 default:
                     break;
@@ -85,6 +89,7 @@ namespace main.Resources
             {
                 Properties.Settings.Default.yourKey = tbYourKey.Text;
                 Properties.Settings.Default.currentApiKey = Properties.Settings.Default.yourKey;
+                Properties.Settings.Default.resetDataFlag = true;
                 Properties.Settings.Default.Save();
             }
             else

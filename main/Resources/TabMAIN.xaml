@@ -34,7 +34,7 @@
                 <Run x:Name="tbrCourseDollar" Text=""/>
                 <Run x:Name="tbrCourseEuro" Text=""/>
             </TextBlock>
-            <Button  x:Name="bRes" Style="{DynamicResource ButtonStyle}" Content="⟳" HorizontalAlignment="Center" Margin="-24,0,450,310" Height="40" Width="40" FontSize="23" VerticalAlignment="Bottom"  BorderThickness="0" Click="Button_Click" RenderTransformOrigin="2,0.625"/>
+            <Button  x:Name="bRes" Style="{DynamicResource ButtonStyle}" Content="⟳" HorizontalAlignment="Left" Margin="-24,115,0,0" Height="40" Width="40" FontSize="23" VerticalAlignment="Top"  BorderThickness="0" Click="Button_Click" RenderTransformOrigin="2,0.625"/>
         </Grid>
     </Grid>
 </UserControl>

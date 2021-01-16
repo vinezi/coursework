@@ -60,8 +60,8 @@ namespace main.Resources
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "\nНекоторые данные не доступны!");
-                tbrMinPart.Text = "Ошибка загрузки погоды";
+                MessageBox.Show(ex.Message + "\nНекоторые данные не доступны!\nСмените ключ api в настройках");
+                tbrMinPart.Text = "Ошибка загрузки погоды\nСмените ключ api в настройках";
             }
         }
         public void GetValute()
@@ -81,9 +81,14 @@ namespace main.Resources
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bRes.IsEnabled = false;
-            bRes.Visibility = Visibility.Collapsed;
-            getWeather();
+            if (Properties.Settings.Default.resetDataFlag)
+            {
+                //bRes.IsEnabled = false;
+                //bRes.Visibility = Visibility.Collapsed;
+                getWeather();
+            }
+            Properties.Settings.Default.resetDataFlag = false;
+            Properties.Settings.Default.Save();
         }
     }
 }
