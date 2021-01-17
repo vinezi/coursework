@@ -50,6 +50,11 @@ namespace main.Services
             using (var reader = File.OpenText(PATH))
             {
                 var fileText = reader.ReadToEnd();
+                FileInfo fileInf = new FileInfo(PATH);
+                if (fileInf.Length == 0)
+                {
+                    return new BindingList<NotesModel>();
+                }
                 return JsonConvert.DeserializeObject<BindingList<NotesModel>>(fileText);
             }
         }

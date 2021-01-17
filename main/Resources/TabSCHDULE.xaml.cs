@@ -25,7 +25,7 @@ namespace main.Resources
     /// </summary>
     public partial class TabSCHDULE : UserControl
     {
-        private readonly string PATH = $"{Environment.CurrentDirectory}\\testDate";
+        private readonly string PATH = $"{Environment.CurrentDirectory}\\Schedule";
         private BindingList<Schedule> _todoData;
         private FileIOService _fileIOService;
 
@@ -94,6 +94,6 @@ namespace main.Resources
             textBox.Focus();
             if (textBox.Text != null) textBox.SelectAll();
         }
-       
+
     }
 }
