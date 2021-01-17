@@ -26,7 +26,7 @@
                 <DataTemplate>
                     <Border Margin="10" Padding="00" BorderBrush="DimGray" BorderThickness="2" CornerRadius="2">
                         <TextBox Style="{DynamicResource TextBoxStyle}" x:Name="Tb"  Text="{Binding Tb,UpdateSourceTrigger=PropertyChanged}"
-                          TextWrapping="Wrap" 
+                          TextWrapping="Wrap" AcceptsReturn="True"
                          FontSize="14" HorizontalAlignment="Stretch" FontFamily="SEMonotxt" MinWidth="700" MinHeight="0" BorderThickness="0">
 
                         </TextBox>
